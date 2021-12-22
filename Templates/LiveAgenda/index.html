@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Title</title>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <header>
+        <div class="desktop"></div>
+        <div class="phone"></div>
+    </header>
+    <body>
+        {% include page %}
+    </body>
+    <footer>
+        <div class="desktop"></div>
+        <div class="phone"></div>
+    </footer>
+    <script src="{% static 'index.js' %}"></script>
+</html>

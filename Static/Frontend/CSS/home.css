@@ -1,0 +1,30 @@
+body {
+    overflow-x: hidden;
+}
+
+.desktop {
+    --numb: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    width: calc(var(--numb)*100%);
+    overflow-y: hidden;
+}
+
+.menuItem {
+    min-width: 100%;
+    width: 100%;
+    width: calc(100%/var(--numb));
+    height: 100vh;
+}
+
+.menuItem:nth-child(1) {background: purple;}
+.menuItem:nth-child(2) {background: orange;}
+.menuItem:nth-child(3) {background: green;}
+
+.startBar {
+    margin-top: 11vw;
+    height: 1px;
+    width: 100%;
+    background: black;
+}

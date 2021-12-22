@@ -1,0 +1,24 @@
+{% load static %}
+
+<head>
+    <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
+    <link rel="stylesheet" href="{% static 'WebShop/CSS/home.css' %}">
+</head>
+
+<main>
+    <div class="desktop">
+        {% for item in items %}
+        <div class="item">
+            <div class="itemInner">
+                <h1>{{ item.itemName }}</h1>
+                <img src="/media/{{ item.itemIMG }}">
+                <div class="price">€ {{ item.price }}</div>
+                <p>{{ item.description }}</p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="phone"></div>
+</main>
+<script src="{% static 'home.js' %}"></script>
