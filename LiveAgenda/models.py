@@ -3,7 +3,6 @@ from django.db import models
 
 class appointment(models.Model):
     date = models.DateTimeField(auto_now_add=True)
-    # appointment_id = models.CharField(max_length=20, default='', unique=True)
     Naam = models.CharField(max_length=20, help_text='Name of the person', default='')
     Achternaam = models.CharField(max_length=20, help_text='Surname of the person', default='')
     Nummer = models.CharField(null=True, max_length=20, help_text='Contact phone number', default='+31 6')
@@ -36,6 +35,7 @@ class appointment(models.Model):
     def __str__(self):
         return self.Naam
 
-
     class Meta:
-        verbose_name_plural = "appointments"
+        verbose_name_plural = "Appointments"
+
+

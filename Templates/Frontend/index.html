@@ -5,48 +5,41 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Title</title>
+        <title>MittaCutzz</title>
+        <link rel="icon" href="{% static 'Frontend/IMG/logo_zoekbalk_1.png' %}">
         <link rel="stylesheet" href="{% static 'Frontend/CSS/index.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
     </head>
 
     <header>
-        <div class="desktop">
-            <div class="title">
-                <h1>Nigel & Sebastiaan's</h1>
-                <h2>Django features</h2>
-            </div>
-            <div class="nav">
-                <div class="bar">
-                    <a id="btn-1" onclick="chooseMenu(1);">
-                        <div>Home</div>
-                    </a>
-                    <a id="btn-2" onclick="chooseMenu(2);">
-                        <div>All Apps</div>
-                    </a>
-                    <a id="btn-3" onclick="chooseMenu(3);">
-                        <div>About</div>
-                    </a>
-                </div>
-            </div>
+        <a class="headLogo" href="/">
+            <img src="{% static 'Frontend/IMG/logo.png' %}" alt="BedrijfsLogo">
+        </a>
+        <div class="burger" onclick="nav();">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <div class="phone">
-            <div class="title">
-                <h1>Nigel & Sebastiaan's</h1>
-                <h2>Django features</h2>
-            </div>
-            <div class="nav">
-                <a {% if request.get_full_path == '/' %} class="current" {% endif %} href="/">Home</a>
-                <a {% if request.get_full_path == '/apps' %} class="current" {% endif %} href="/apps">Alle apps</a>
-                <a {% if request.get_full_path == '/about' %} class="current" {% endif %} href="/about">About</a>
-            </div>
+        <div id="navList" class="nav">
+                <a href="/" {% if request.get_full_path == "/" %} class="currentPage" {% else %} class="navLink" {% endif %} >Home</a>
+                <a href="/tarieven" {% if request.get_full_path == "/tarieven" %} class="currentPage" {% else %} class="navLink" {% endif %} >Tarieven</a>
+                <a href="/contact" {% if request.get_full_path == "/contact" %} class="currentPage" {% else %} class="navLink" {% endif %} >Contact</a>
+                <a href="/over-mittacutzz" {% if request.get_full_path == "/over-mittacutzz" %} class="currentPage" {% else %} class="navLink" {% endif %} >Over MittaCuttz</a>
         </div>
     </header>
-    <body>
-        {% include page %}
-    </body>
+    {% include page %}
     <footer>
-        <div class="desktop"></div>
+        <div class="desktop">
+            <div></div>
+            <div></div>
+            <div>
+                <h2></h2>
+            </div>
+        </div>
         <div class="phone"></div>
     </footer>
     <script src="{% static 'Frontend/JS/index.js' %}"></script>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ProjectResources">
+    <resource url="https://fonts.googleapis.com/css" location="$PROJECT_DIR$" />
+    <resource url="https://fonts.googleapis.com/css?family=Raleway:200'" location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9" project-jdk-type="Python SDK" />
 </project>

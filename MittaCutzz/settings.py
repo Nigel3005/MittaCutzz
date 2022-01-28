@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
 
     # Downloads
     'user_visit',
+
+    # 'djangoratings',
 
     # Own
     'Frontend',
@@ -128,8 +131,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/Static/'
-STATICFILES_DIRS = [BASE_DIR / 'Static']
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static'] #ONS
+STATIC_ROOT = BASE_DIR / 'staticfiles' #DJANGO
+
+
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+#voting field
+
+# range = 10
+# can_change_vote = False
+# allow_anonymous = True
+# use_cookies = True
+# RATINGS_VOTES_PER_IP = 3
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.bhosted.nl'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True

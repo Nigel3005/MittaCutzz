@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'Frontend/CSS/tarieven.css' %}">
+    <title>Tarieven</title>
+</head>
+<main>
+    <img src="{% static 'Frontend/IMG/werkplek_1.jpg' %}" alt="" class="bg">
+    <div class="container-left border-gradient">
+        <div>
+            {% for p in prijzen %}
+
+            <div class="info-left">
+                <h1>{{ p.titel }}</h1>
+
+                <h2>Knippen vaste Klant </h2>
+                <p>€ {{ p.vasteKlantPrijs }}</p>
+
+                <h2>Knippen nieuwe Klant </h2>
+                <p>€ {{ p.nieuweKlantPrijs }}</p>
+
+                <h2>Contouren </h2>
+                <p>€ {{ p.contourPrijs }}</p>
+
+                <h2>Alleen Tondeuse </h2>
+                <p>€ {{ p.tondeusePrijs }}</p>
+
+                <h2>Baard </h2>
+                <p>€ {{ p.baardPrijs }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="container-right">
+        <div class="infoContain right-1 border-gradient">
+         <img src="{% static 'Frontend/IMG/red_one_wax_all.jpg' %}" alt="">
+            {% for p in prijzen %}
+                <h1>Wax </h1>
+                <p>€ {{ p.waxPrijs }}</p>
+            {% endfor %}
+        </div>
+        <div class="infoContain right-2 border-gradient ">
+            {% for p in prijzen %}
+                <h1>Betaalwijze</h1>
+                <h2>{{ p.betaalWijze }} </h2>
+
+                <div class="tooltip">
+                        <h3>{{ p.extra }} </h3>
+                        <p class="p-tooltip"> ? <span class="tooltiptext">Bijv. Tikkies, paysafe, tegoed bonnen.</span></p>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+</main>
+</html>

@@ -1,20 +1,30 @@
 {% load static %}
 
 <head>
-    <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
-    <link rel="stylesheet" href="{% static 'Registration/CSS/login.css' %}">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'style/registration.css' %}">
+
 </head>
 
-<main>
-    <form method="post">
-        {% csrf_token %}
-        <table>
-            {{ form.as_p }}
-            <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit" value="Submit"></td>
-            </tr>
-        </table>
-    </form>
-</main>
-<script src="{% static 'Frontend/JS/home.js' %}"></script>
+
+<body>
+    {% if user.is_authenticated %}
+        <br>
+        <h1 id="welkoms-bericht">Welkom {{ user.username }}</h1>
+        <h1 id="welkoms-bericht">je bent al ingelogd</h1>
+    {% else %}
+        <div class="login-box">
+        <h1>Login</h1>
+        <p>{{ error }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" name="login">Login</button>
+        </form>
+    </div>
+    {% endif %}
+
+
+</body>

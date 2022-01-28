@@ -1,0 +1,118 @@
+{% load static %}
+{#{% load ratings %}#}
+
+<head>
+    <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
+    <link rel="stylesheet" href="{% static 'Frontend/CSS/home.css' %}">
+</head>
+
+<main>
+    <div class="full-width-img">
+        {# img als achtergrond voor home page. volledige breedte #}
+        <img src="{% static 'Frontend/IMG/werkplek_1.jpg' %}">
+        {# text gecentreerd in het midden boven de button #}
+        <h1>Welkom op de website van MittaCutzz</h1>
+        {# blauwe button #}
+        <button>Contact</button>
+    </div>
+
+    <div>
+        {# info gecentreerd #}
+        <h1>info</h1>
+        {# text onder info ook gecentreerd. in het zwart  #}
+        <p>
+            MittaCutzz is de betaalbare kapper in rijswijk voor heren vanaf 6+
+            knippen alleen op afspraak!!
+        </p>
+        {# button gecentreerd onder de informatie. zelfde kleur blauw! #}
+        <button href="/contact"><i class="fas fa-cut"></i >Afspraak maken</button>
+    </div>
+
+    {# div ruimtes met logo. zelfde width als voorgaande divs #}
+    <div class="logo-space-between-divs">
+        {# logo in ruimte #}
+        <img src="{% static 'Frontend/IMG/logo.png' %}">
+    </div>
+
+    <div class="rounded-foto's">
+        {# 3 foto's rond naast elkaar. met het hoofd in het midden #}
+        <img src="{% static 'Frontend/IMG/foto_9.jpg' %}">
+        <img src="{% static 'Frontend/IMG/foto_7.jpg' %}">
+        <img src="{% static 'Frontend/IMG/foto_11.jpg' %}">
+    </div>
+
+    <div>
+        {# text gecentreerd boven de informatie. dik edrukt zwart #}
+        <h1>Sociale Media</h1>
+        {# text onder sociale media gecentreerd. zwart. kopje 1 #}
+        <p>
+            Volg ons op sociale media voor de laatste acties,
+            events en kortingen op knipbeurten en producten.
+        </p>
+        {# button gecentreerd onder sociale media. Zwart. kopje 2 #}
+        <p>
+            via de onderstaande sociale media kanalen kun je
+            ook inspiratie opdoen voor je volgende kapsel,
+        </p>
+        {# button gecentreerd onder sociale media. Zwart. kopje 3 #}
+        <p>
+            of simpelweg op de hoogte blijven van onze
+            werkzaamheden.
+        </p>
+        {# button gecentreerd onder sociale media. Zwart. kopje 4 #}
+        <p>
+            we plaatsen regelmatig het laatste werk op
+            instagram en snapchat.
+        </p>
+        {# rond social media button met daarin class van social media icon. zelfde kleur blauw #}
+        <a href="https://instagram.com/MittaCutzz" target="_blank"><i class="fab fa-instagram"></i></a>
+
+        <h3>Scan hier de snapcode</h3>
+        <img src="{% static 'Frontend/IMG/snapcode_mitchell.jpg' %}">
+        <h3 class="snap-naam">Mitta.07</h3>
+    </div>
+
+    {# div ruimtes met logo. zelfde width als voorgaande divs #}
+    <div class="logo-space-between-divs">
+        {# logo in ruimte #}
+        <img src="{% static 'Frontend/IMG/logo.png' %}">
+    </div>
+    {# slideshow every 2 seconds new img #}
+    <div class="slide-show">
+        {% for img in images %}
+            <img class="slidePic" src="{% static 'Frontend/IMG/Home-Slide/' %}{{ img }}">
+        {% endfor %}
+    </div>
+
+    <div>
+        <p>Reactie plaatsen</p>
+        <form action="" method="post">
+            <label for="Naam">Naam:</label>
+            <input type="text" id="Naam" name="Naam" value=""> <br>
+            <label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" value=""> <br>
+            <label for="Reactie">Bericht:</label>
+            <input type="text" id="Reactie" name="Reactie" value=""><br>
+            <label for="Akkoord">Hierbij geef ik akkoord dat mijn naam en e-mail zichtbaar zijn voor iedereen die op deze website komt:</label>
+            <input type="checkbox" id="Akkoord" name="Akkoord">
+            <br>
+            <input type="submit">
+        </form>
+
+    </div>
+
+    <div>
+        <p>Reactie</p>
+        {% for reactie in reacties %}
+            <p>{{ reactie.Naam }}</p>
+            {% if user.is_authenticated %}
+                <p>{{ reactie.Email }}</p>
+            {% endif %}
+            <p>{{ reactie.reactie_date }}</p>
+            <p>{{ reactie.reactie }}</p>
+        {% endfor %}
+
+    </div>
+</main>
+
+<script src="{% static 'Frontend/JS/home.js' %}"></script>

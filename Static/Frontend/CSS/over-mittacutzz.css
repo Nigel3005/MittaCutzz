@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Desktop styling */
+@media (min-width: 1000px) {
+    main{
+        width: 100%;
+        height: calc(100vh - 120px);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .img-circle{
+        height: 20vw;
+        width: 20vw;
+        border-radius: 50%;
+    }
+
+    #info{
+        text-align: justify;
+        width: 21%;
+        height: 19vw;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 0.85vw;
+        font-weight: 900;
+        font-family: 'Raleway', serif;
+    }
+
+    .img-certifcate{
+        width: 20vw;
+    }
+
+    #box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 200px;
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .gradient-border {
+      --borderWidth: 6px;
+      background: white;
+      position: relative;
+      border-radius: var(--borderWidth);
+    }
+    .gradient-border:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--borderWidth));
+      left: calc(-1 * var(--borderWidth));
+      height: calc(100% + var(--borderWidth) * 2);
+      width: calc(100% + var(--borderWidth) * 2);
+      background: linear-gradient(60deg, #000000, #d7d7d7, #000000, #d7d7d7, #000000, #d7d7d7, #000000, #d7d7d7);
+      border-radius: calc(2 * var(--borderWidth));
+      z-index: -1;
+      animation: animatedgradient 5s ease alternate infinite;
+      background-size: 300% 300%;
+    }
+
+
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+}
+
+/* Mobile styling */
+@media (max-width: 1000px) {
+    main{
+        width: 100%;
+        height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .img-circle{
+        height: 28vw;
+        width: 28vw;
+        border-radius: 50%;
+    }
+
+    #info{
+        text-align: justify;
+        width: 24%;
+        height: 18vw;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 0.95vw;
+        font-weight: 900;
+        font-family: 'Raleway', serif;
+    }
+
+    .img-certifcate{
+        width: 22vw;
+    }
+
+    #box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 200px;
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .gradient-border {
+        --borderWidth: 6px;
+        background: white;
+        position: relative;
+        border-radius: var(--borderWidth);
+    }
+
+    .gradient-border:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--borderWidth));
+      left: calc(-1 * var(--borderWidth));
+      height: calc(100% + var(--borderWidth) * 2);
+      width: calc(100% + var(--borderWidth) * 2);
+      background: linear-gradient(60deg, #000000, #d7d7d7, #000000, #d7d7d7, #000000, #d7d7d7, #000000, #d7d7d7);
+      border-radius: calc(2 * var(--borderWidth));
+      z-index: -1;
+      animation: animatedgradient 5s ease alternate infinite;
+      background-size: 300% 300%;
+    }
+
+
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+}
