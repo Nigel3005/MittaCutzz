@@ -40,18 +40,18 @@
         <div class="infoContain right-1 border-gradient">
          <img src="{% static 'Frontend/IMG/red_one_wax_all.jpg' %}" alt="">
             {% for p in prijzen %}
-                <h1>Wax </h1>
+                <h1 class="right-h1">Wax </h1>
                 <p>€ {{ p.waxPrijs }}</p>
             {% endfor %}
         </div>
         <div class="infoContain right-2 border-gradient ">
             {% for p in prijzen %}
-                <h1>Betaalwijze</h1>
+                <h1 class="right-h1">Betaalwijze</h1>
                 <h2>{{ p.betaalWijze }} </h2>
 
                 <div class="tooltip">
                         <h3>{{ p.extra }} </h3>
-                        <p class="p-tooltip"> ? <span class="tooltiptext">Bijv. Tikkies, paysafe, tegoed bonnen.</span></p>
+                        <p class="p-tooltip"> ? <span class="tooltiptext">Bijv. Tikkies, paysafe en tegoed bonnen.</span></p>
                 </div>
 
             {% endfor %}
