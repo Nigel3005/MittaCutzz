@@ -40,7 +40,7 @@ mittacutzz.com
               fail_silently=False, auth_user='noreply@mittacutzz.com', auth_password='ZweetSok070!')
 
 def indexView(request):
-    homeSlidePath = settings.BASE_DIR / 'static/Frontend/IMG/Home-Slide'
+    homeSlidePath = settings.BASE_DIR / 'Static/Frontend/IMG/Home-Slide'
     imgList = os.listdir(homeSlidePath)
     data = {
         'page': 'Frontend/home.html',
