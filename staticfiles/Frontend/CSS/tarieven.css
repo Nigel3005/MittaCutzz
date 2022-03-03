@@ -1,5 +1,5 @@
 /* Desktop */
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   main {
     position: relative;
     width: 100%;
@@ -136,7 +136,7 @@
     cursor: default;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 75%;
   }
 
@@ -151,6 +151,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-left: 10px;
   }
 
   .tooltip p::before {
@@ -174,87 +175,161 @@
   .tooltip p:hover::before {
     opacity: 1;
   }
-
-  .p-tooltip {
-    margin-left: 6px;
-    color: #999999;
-  }
 }
 
 /* Phone and tablet styling */
 @media (max-width: 1200px) {
   main {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
-    background: white;
   }
 
   .bg {
     display: none;
   }
 
-  .container-left,
-  .container-right {
-    height: 40%;
-    width: 80%;
-    background: rgba(0, 0, 0, 0.6);
+  .container-left {
+    text-align: center;
+    background-color: #000000aa;
     color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 85%;
+    padding: 5%;
+  }
+
+  .container-left h1 {
+    margin-bottom: 10px;
+    font-size: 200%;
+  }
+
+  .container-left h2,
+  .container-left p {
+    text-align: left;
+    text-shadow: 1px 1px #000000;
+  }
+
+  .container-left h2 {
+    font-size: 120%;
+  }
+
+  .container-left p {
+    font-size: 100%;
+    margin-bottom: 8px;
+  }
+
+  .container-right {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
-    border-radius: 10px;
   }
 
-  .container-left img {
-    width: 55%;
-  }
-
-  .infoContain {
-    height: 20%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    font-size: 5vw;
-  }
-
-  .infoContain a {
+  .right-1 {
+    text-align: center;
+    background-color: #000000aa;
     color: whitesmoke;
-    text-decoration: none;
-    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 85%;
+    padding: 5%;
   }
 
-  .infoContain a i {
-    margin-right: 10px;
-  }
-
-  .container-right h1 {
-    font-size: 6vw;
-  }
-
-  .tijden {
-    font-size: 4vw;
-  }
-
-  .tijd {
-    display: flex;
+  .right-1 {
     margin-bottom: 10px;
+    font-size: 150%;
   }
 
-  .fa-check-circle {
-    color: var(--greenCheck);
-    font-size: 5vw;
-    margin-right: 10px;
+  .right-1 img {
+    width: 80%;
   }
-  .fa-times-circle {
-    color: var(--redEx);
-    font-size: 5vw;
-    margin-right: 10px;
+
+  .right-1 p {
+    text-shadow: 1px 1px #000000;
+  }
+
+  .right-1 p {
+    font-size: 100%;
+    margin-bottom: 8px;
+  }
+
+  .right-2 {
+    text-align: center;
+    background-color: #000000aa;
+    color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 85%;
+    padding: 5%;
+  }
+
+  .right-2 h1 {
+    margin-bottom: 10px;
+    font-size: 200%;
+  }
+
+  .right-2 h2,
+  .right-2 h3 {
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+  }
+
+  .right-2 h2 {
+    font-size: 120%;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  .right-2 h3 {
+    font-size: 100%;
+    margin-bottom: 8px;
+  }
+
+  .tooltip {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tooltip p {
+    font-size: 20px;
+    font-weight: 900;
+    background: rgb(53, 91, 214);
+    height: 30px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .tooltip p::before {
+    content: "Geen Tikkie, Paysafe, enz...";
+    position: absolute;
+    width: 235px;
+    height: 28px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    opacity: 0;
+    right: 10px;
+    bottom: 45px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    pointer-events: none;
+  }
+
+  .tooltip p:hover::before {
+    opacity: 1;
   }
 }
