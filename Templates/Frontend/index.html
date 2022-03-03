@@ -14,33 +14,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
         <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
     </head>
-
-    <header>
-        <a class="headLogo" href="/">
-            <img src="{% static 'Frontend/IMG/logo.png' %}" alt="BedrijfsLogo">
-        </a>
-        <div class="burger" onclick="nav();">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <div id="navList" class="nav">
-                <a href="/" {% if request.get_full_path == "/" %} class="currentPage" {% else %} class="navLink" {% endif %} >Home</a>
-                <a href="/tarieven" {% if request.get_full_path == "/tarieven" %} class="currentPage" {% else %} class="navLink" {% endif %} >Tarieven</a>
-                <a href="/contact" {% if request.get_full_path == "/contact" %} class="currentPage" {% else %} class="navLink" {% endif %} >Contact</a>
-                <a href="/over-mittacutzz" {% if request.get_full_path == "/over-mittacutzz" %} class="currentPage" {% else %} class="navLink" {% endif %} >Over MittaCuttz</a>
-        </div>
-    </header>
-    {% include page %}
-    <footer>
-        <div class="desktop">
-            <div></div>
-            <div></div>
-            <div>
-                <h2></h2>
+    <body>
+        <header>
+            <a class="headLogo" href="/">
+                <img src="{% static 'Frontend/IMG/logo.png' %}" alt="BedrijfsLogo">
+            </a>
+            <div class="burger" onclick="nav();">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-        </div>
-        <div class="phone"></div>
-    </footer>
+            <div id="navList" class="nav">
+                    <a href="/" {% if request.get_full_path == "/" %} class="currentPage" {% else %} class="navLink" {% endif %} >Home</a>
+                    <a href="/tarieven" {% if request.get_full_path == "/tarieven" %} class="currentPage" {% else %} class="navLink" {% endif %} >Tarieven</a>
+                    <a href="/contact" {% if request.get_full_path == "/contact" %} class="currentPage" {% else %} class="navLink" {% endif %} >Contact</a>
+                    <a href="/over-mittacutzz" {% if request.get_full_path == "/over-mittacutzz" %} class="currentPage" {% else %} class="navLink" {% endif %} >Over MittaCuttz</a>
+            </div>
+        </header>
+        {% include page %}
+    </body>
     <script src="{% static 'Frontend/JS/index.js' %}"></script>
 </html>

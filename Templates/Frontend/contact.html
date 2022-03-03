@@ -2,82 +2,121 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'Frontend/CSS/contact.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'Frontend/CSS/contact.css' %}" />
     <title>Contact</title>
-</head>
-<main>
+  </head>
+  <main>
     {# volledige breedte google maps locatie #}
     <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d613.5650367208955!2d4.3168195881719145!3d52.03857472368148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b6979d1aedfb%3A0xb7a25986219ec631!2sWethouder%20Hillenaarplantsoen%2C%20Rijswijk!5e0!3m2!1snl!2snl!4v1642183631525!5m2!1snl!2snl" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d613.5650367208955!2d4.3168195881719145!3d52.03857472368148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b6979d1aedfb%3A0xb7a25986219ec631!2sWethouder%20Hillenaarplantsoen%2C%20Rijswijk!5e0!3m2!1snl!2snl!4v1642183631525!5m2!1snl!2snl"
+        width="400"
+        height="250"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
     </div>
 
     <div class="container">
-        {# div met socials en locatie #}
-        <div class="div-left">
-            <div class="div-left-1">
-                <h1>Neem persoonlijk contact op</h1>
-                <br>
-                <a class="fas fa-map-marker-alt"> Wethouder Hillenaarplantsoen, Rijswijk, 2284 VV </a>
-                <br>
-                <i class="fas fa-phone-square-alt"> 06-19390108</i>
-                <br>
-                <a class="fas fa-envelope"> Info@mittacutzz.com</a>
-            </div>
-
-            <div class="div-left-2">
-                <h1>Social media</h1>
-                <br>
-                <div class="inner-div-left-2">
-                    <span>
-                        <a class="socials" href="https://www.snapchat.com/add/mitta.07/" target="_blank">
-                            <i class="fab fa-snapchat fa-3x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="socials" href="https://www.instagram.com/MittaCutzz/" target="_blank">
-                            <i class="fab fa-instagram fa-3x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="socials-notActive">
-                            <i class="fab fa-twitter fa-3x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="socials-notActive">
-                            <i class="fab fa-facebook fa-3x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="socials-notActive">
-                            <i class="fab fa-linkedin fa-3x"></i>
-                        </a>
-                    </span>
-                </div>
-            </div>
+      {# div met socials en locatie #}
+      <div class="div-left">
+        <div class="div-left-1">
+          <h1>Neem persoonlijk contact op</h1>
+          <br />
+          <a
+            href="https://www.google.com/maps?ll=52.038574,4.317368&z=18&t=m&hl=nl&gl=NL&mapclient=embed&q=Wethouder+Hillenaarplantsoen+Rijswijk"
+            class="fas fa-map-marker-alt"
+          >
+            Wethouder Hillenaarplantsoen, Rijswijk, 2284 VV
+          </a>
+          <i class="fas fa-phone-square-alt">06-19390108</i>
+          <a href="mailto:info@mittacutzz.com" class="fas fa-envelope">
+            Info@mittacutzz.com
+          </a>
         </div>
 
-        {# div met contact form, voor een bericht of vraag. #}
-        <div class="div-right">
-            <form method="post">
-                <h1>Of verstuur direct een bericht.</h1>
-                <br>
-                {% csrf_token %}
-                <label>Naam</label>
-                <input type="text" id="name" name="name" placeholder="Your name.." required autocomplete="off">
-
-                <label>E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Your e-mail.." required autocomplete="off">
-
-                <label>Bericht</label>
-                <textarea id="bericht" name="bericht" placeholder="Write something.." required autocomplete="off"></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
+        <div class="div-left-2">
+          <h1>Social media</h1>
+          <div class="inner-div-left-2">
+            <span>
+              <a
+                class="socials"
+                href="https://www.snapchat.com/add/mitta.07/"
+                target="_blank"
+              >
+                <i class="fab fa-snapchat fa-3x"></i>
+              </a>
+            </span>
+            <span>
+              <a
+                class="socials"
+                href="https://www.instagram.com/MittaCutzz/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram fa-3x"></i>
+              </a>
+            </span>
+            <span>
+              <a class="socials-notActive">
+                <i class="fab fa-twitter fa-3x"></i>
+              </a>
+            </span>
+            <span>
+              <a class="socials-notActive">
+                <i class="fab fa-facebook fa-3x"></i>
+              </a>
+            </span>
+            <span>
+              <a class="socials-notActive">
+                <i class="fab fa-linkedin fa-3x"></i>
+              </a>
+            </span>
+          </div>
         </div>
+      </div>
+
+      {# div met contact form, voor een bericht of vraag. #}
+      <div class="div-right">
+        <form method="post">
+          <h1>Of verstuur direct een bericht.</h1>
+          <br />
+          {% csrf_token %}
+          <label>Naam</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name.."
+            required
+            autocomplete="off"
+          />
+
+          <label>E-mail</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Your e-mail.."
+            required
+            autocomplete="off"
+          />
+
+          <label>Bericht</label>
+          <textarea
+            id="bericht"
+            name="bericht"
+            placeholder="Write something.."
+            required
+            autocomplete="off"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
-</main>
+  </main>
 </html>

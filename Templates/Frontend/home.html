@@ -1,55 +1,66 @@
-{% load static %}
-{#{% load ratings %}#}
+{% load static %} {#{% load ratings %}#}
 
 <head>
-    <script src='https://kit.fontawesome.com/1b028243f3.js'></script>
-    <link rel="stylesheet" href="{% static 'Frontend/CSS/home.css' %}">
+  <script src="https://kit.fontawesome.com/1b028243f3.js"></script>
+  <link rel="stylesheet" href="{% static 'Frontend/CSS/home.css' %}" />
 </head>
 
 <main>
-    <img src="{% static 'Frontend/IMG/werkplek_1.jpg' %}" alt="" class="bg">
-    <div class="container-left border-gradient">
-        <img src="{% static 'Frontend/IMG/eigenfoto.jpg' %}" alt="">
-        <div class="infoContain">
-            <a href="https://www.snapchat.com/add/mitta.07/" target="_blank"><i class="fab fa-snapchat"></i><p>mitta.07</p></a>
-            <a href="https://www.instagram.com/MittaCutzz/" target="_blank"><i class="fab fa-instagram"></i><p>MittaCutzz</p></a>
-            <a><i class="fas fa-envelope"></i><p>info@mittacutzz.com</p></a>
-            <a><i class="fas fa-phone-square-alt"></i><p>06-19390108</p></a>
-        </div>
+  <img src="{% static 'Frontend/IMG/werkplek_1.jpg' %}" alt="" class="bg" />
+  <div class="container-left border-gradient">
+    <img src="{% static 'Frontend/IMG/eigenfoto.jpg' %}" alt="" />
+    <div class="infoContain">
+      <a href="https://www.snapchat.com/add/mitta.07/" target="_blank">
+        <i class="fab fa-snapchat"></i>
+        <p>mitta.07</p>
+      </a>
+      <a href="https://www.instagram.com/MittaCutzz/" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <p>MittaCutzz</p>
+      </a>
+      <a>
+        <i class="fas fa-envelope"></i>
+        <p>info@mittacutzz.com</p>
+      </a>
+      <a>
+        <i class="fas fa-phone-square-alt"></i>
+        <p>06-19390108</p>
+      </a>
     </div>
-    <div class="container-right border-gradient">
-        <h1>Openingstijden</h1>
-        <div class="tijden">
-            <div class="tijd">
-                <i class="fas fa-check-circle"></i>
-                <p>Ma: 11:00 - 16:00</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-check-circle"></i>
-                <p>Di: 11:00 - 16:00</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-check-circle"></i>
-                <p>Wo: 11:00 - 16:00</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-check-circle"></i>
-                <p>Do: 11:00 - 16:00</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-check-circle"></i>
-                <p>Vr: 11:00 - 16:00</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-times-circle"></i>
-                <p>Za: Gesloten</p>
-            </div>
-            <div class="tijd">
-                <i class="fas fa-times-circle"></i>
-                <p>Zo: Gesloten</p>
-            </div>
-        </div>
+  </div>
+  <div class="container-right border-gradient">
+    <h1>Openingstijden</h1>
+    <div class="tijden">
+      <div class="tijd">
+        <i class="fas fa-check-circle"></i>
+        <p>Ma: 11:00 - 16:00</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-check-circle"></i>
+        <p>Di: 11:00 - 16:00</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-check-circle"></i>
+        <p>Wo: 11:00 - 16:00</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-check-circle"></i>
+        <p>Do: 11:00 - 16:00</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-check-circle"></i>
+        <p>Vr: 11:00 - 16:00</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-times-circle"></i>
+        <p>Za: Gesloten</p>
+      </div>
+      <div class="tijd">
+        <i class="fas fa-times-circle"></i>
+        <p>Zo: Gesloten</p>
+      </div>
     </div>
+  </div>
 </main>
 
 <script src="{% static 'Frontend/JS/home.js' %}"></script>

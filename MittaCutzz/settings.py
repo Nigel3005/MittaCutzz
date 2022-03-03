@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,8 +44,6 @@ INSTALLED_APPS = [
 
     # Downloads
     'user_visit',
-
-    # 'djangoratings',
 
     # Own
     'Frontend',

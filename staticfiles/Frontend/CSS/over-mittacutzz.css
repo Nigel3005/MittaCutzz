@@ -6,7 +6,7 @@
 }
 
 /* Desktop styling */
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     main{
         width: 100%;
         height: calc(100vh - 120px);
@@ -84,7 +84,7 @@
 }
 
 /* Mobile styling */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     main{
         width: 100%;
         height: calc(100vh - 120px);
@@ -95,8 +95,10 @@
     }
 
     .img-circle{
-        height: 28vw;
-        width: 28vw;
+        width: calc(30vw / 9 * 16);
+        /*height: auto;*/
+        /*width: 200px;*/
+        /*height: 200px;*/
         border-radius: 50%;
     }
 
